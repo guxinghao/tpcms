@@ -6,7 +6,8 @@ class Index extends Base
 {
     public function index()
     {
-        return $this->fetch();
+        $this->redirect('index/wxChat');
+        // return $this->fetch();
     }
 
     //微信公众号列表页
