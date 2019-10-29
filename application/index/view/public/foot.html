@@ -7,3 +7,13 @@
 <script src="__STATIC__/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 <!-- Main File-->
 <script src="__STATIC__/js/front.js"></script>
+<script type="text/javascript">
+    let _name = $.cookie('n');
+    $('.user_name').html(_name);
+    //退出登录
+    $('.logout').click(function(event) {
+        $.removeCookie('n');
+        $.removeCookie('u');
+        setTimeout("window.location.href = 'login.html';",3000);
+    });
+</script>
