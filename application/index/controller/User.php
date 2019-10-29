@@ -11,7 +11,8 @@ class User extends Base
         $get = $request->get();
         $where['is_del'] = 0;
         $search = '';
-        if (isset($get['search']) && empty(trim($get['search']))) {
+
+        if (isset($get['search']) && (!empty(trim($get['search'])))) {
             $search = trim($get['search'])?:'';
             $where['user_name|real_name|mobile'] = ['like','%'.$search.'%'];
         }
