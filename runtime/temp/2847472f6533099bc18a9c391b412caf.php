@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:83:"E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\login.html";i:1572337404;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\foot.html";i:1572337852;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:83:"E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\login\index.html";i:1572343510;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\foot.html";i:1572346264;}*/ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -81,12 +81,22 @@
 <script src="/static/js/front.js"></script>
 <script type="text/javascript">
     let _name = $.cookie('n');
-    $('.user_name').html(_name);
+    $('.ses_user_name').html(_name);
     //退出登录
     $('.logout').click(function(event) {
-        $.removeCookie('n');
-        $.removeCookie('u');
-        setTimeout("window.location.href = 'login.html';",3000);
+        let _user_id = $.cookie('u');
+        $.ajax({
+            type: "post",
+            url: "<?php echo Url('Login/loginOut'); ?>",
+            data: {user_id:_user_id},
+            dataType: "json",
+            async: false,
+            success: function (e) {
+                $.removeCookie('n');
+                $.removeCookie('u');
+                setTimeout("window.location.href = '<?php echo Url('login/index'); ?>';",1000);
+            }
+        });
     });
 </script>
 
@@ -98,7 +108,7 @@
                 let _pwd = $('#login-password').val();
                 $.ajax({
                     type: "post",
-                    url: "<?php echo Url('user/login'); ?>",
+                    url: "<?php echo Url('Login/login'); ?>",
                     data: {user_name:_name,pwd:_pwd},
                     dataType: "json",
                     async: false,
@@ -110,9 +120,9 @@
                         }else{
                             let u = e.id;
                             let n = e.user_name;
-                            $.cookie('u',u);
-                            $.cookie('n',n);
-                            window.location.href = 'index.html';
+                            $.cookie('u',u,{ expires: 1, path: '/' });
+                            $.cookie('n',n,{ expires: 1, path: '/' });
+                            window.location.href = "<?php echo Url('index/index'); ?>";
                         }
                     }
                 });

@@ -1,17 +1,10 @@
 <?php
 namespace app\index\controller;
-use think\Controller;
 use think\Request;
 use app\index\model\wxChat;
-class Index extends Controller
+class Index extends Base
 {
     public function index()
-    {
-        return $this->fetch();
-    }
-
-    //登录
-    public function login()
     {
         return $this->fetch();
     }
@@ -49,7 +42,6 @@ class Index extends Controller
         if ($che['is_empty']) {
             $where = array_merge($where,$che['where']);
         }
-        // 查询状态为1的用户数据 并且每页显示10条数据
         $list = wxChat::where($where)->paginate(20);
         // 获取分页显示
         $page = $list->render();
