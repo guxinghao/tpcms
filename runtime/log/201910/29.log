@@ -4891,3 +4891,418 @@
   0 => 'html',
 ) ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-29T19:59:48+08:00 ] 127.0.0.1 GET www.tpcms.com/index/index/index.html
+[运行时间：0.565524s] [吞吐率：1.77req/s] [内存消耗：1,723.16kb] [文件加载：44]
+[ info ] [ LANG ] E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=64enedqa4at3dahrpvj95anh8n; u=1; n=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.tpcms.com/index/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.tpcms.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/index/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\wxChat.html[E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2019-10-29T19:59:55+08:00 ] 127.0.0.1 GET www.tpcms.com/index/index/index.html
+[运行时间：0.269859s] [吞吐率：3.71req/s] [内存消耗：1,723.16kb] [文件加载：44]
+[ info ] [ LANG ] E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=64enedqa4at3dahrpvj95anh8n; u=1; n=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.tpcms.com/index/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.tpcms.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/index/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\wxChat.html[E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2019-10-29T20:00:09+08:00 ] 127.0.0.1 GET www.tpcms.com/index/index/index.html
+[运行时间：0.669261s] [吞吐率：1.49req/s] [内存消耗：2,901.17kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=64enedqa4at3dahrpvj95anh8n; u=1; n=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.tpcms.com/index/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.tpcms.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/index/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\index.html [ array (
+  0 => 'html',
+  1 => 'list',
+  2 => 'page',
+  3 => 'get',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.087395s ] mysql:host=127.0.0.1;dbname=tpcms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_wx_chat` [ RunTime:0.014662s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_wx_chat` WHERE  `is_del` = 0 LIMIT 1 [ RunTime:0.001695s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_wx_chat` WHERE  `is_del` = 0 LIMIT 0,20 [ RunTime:0.001775s ]
+---------------------------------------------------------------
+[ 2019-10-29T20:00:14+08:00 ] 127.0.0.1 GET www.tpcms.com/index/index/index.html
+[运行时间：0.290088s] [吞吐率：3.45req/s] [内存消耗：2,901.17kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=64enedqa4at3dahrpvj95anh8n; u=1; n=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.tpcms.com/index/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.tpcms.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/index/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\index.html [ array (
+  0 => 'html',
+  1 => 'list',
+  2 => 'page',
+  3 => 'get',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001812s ] mysql:host=127.0.0.1;dbname=tpcms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_wx_chat` [ RunTime:0.014112s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_wx_chat` WHERE  `is_del` = 0 LIMIT 1 [ RunTime:0.001906s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_wx_chat` WHERE  `is_del` = 0 LIMIT 0,20 [ RunTime:0.001711s ]
+---------------------------------------------------------------
+[ 2019-10-29T20:00:15+08:00 ] 127.0.0.1 GET www.tpcms.com/
+[运行时间：0.371969s] [吞吐率：2.69req/s] [内存消耗：2,898.04kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=64enedqa4at3dahrpvj95anh8n; u=1; n=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tpcms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\index.html [ array (
+  0 => 'html',
+  1 => 'list',
+  2 => 'page',
+  3 => 'get',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001500s ] mysql:host=127.0.0.1;dbname=tpcms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_wx_chat` [ RunTime:0.016980s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_wx_chat` WHERE  `is_del` = 0 LIMIT 1 [ RunTime:0.001781s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_wx_chat` WHERE  `is_del` = 0 LIMIT 0,20 [ RunTime:0.002050s ]
+---------------------------------------------------------------
+[ 2019-10-29T20:00:22+08:00 ] 127.0.0.1 GET www.tpcms.com/
+[运行时间：0.210519s] [吞吐率：4.75req/s] [内存消耗：1,720.60kb] [文件加载：44]
+[ info ] [ LANG ] E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=64enedqa4at3dahrpvj95anh8n; u=1; n=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.tpcms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\wxChat.html[E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\library\think\view\driver\Think.php:82]
+---------------------------------------------------------------
+[ 2019-10-29T20:00:45+08:00 ] 127.0.0.1 GET www.tpcms.com/
+[运行时间：0.188789s] [吞吐率：5.30req/s] [内存消耗：1,682.41kb] [文件加载：43]
+[ info ] [ LANG ] E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=64enedqa4at3dahrpvj95anh8n; u=1; n=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.tpcms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-29T20:00:45+08:00 ] 127.0.0.1 GET www.tpcms.com/index/index/wxchat.html
+[运行时间：0.363468s] [吞吐率：2.75req/s] [内存消耗：2,947.14kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'wxchat',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=64enedqa4at3dahrpvj95anh8n; u=1; n=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.tpcms.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/index/wxchat_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->wxChat[ E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\wx_chat.html [ array (
+  0 => 'html',
+  1 => 'list',
+  2 => 'page',
+  3 => 'get',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001462s ] mysql:host=127.0.0.1;dbname=tpcms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_wx_chat` [ RunTime:0.016019s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_wx_chat` WHERE  `is_del` = 0 LIMIT 1 [ RunTime:0.001990s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_wx_chat` WHERE  `is_del` = 0 LIMIT 0,20 [ RunTime:0.001819s ]
+---------------------------------------------------------------
+[ 2019-10-29T20:00:51+08:00 ] 127.0.0.1 GET www.tpcms.com/
+[运行时间：0.340059s] [吞吐率：2.94req/s] [内存消耗：1,682.13kb] [文件加载：43]
+[ info ] [ LANG ] E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=64enedqa4at3dahrpvj95anh8n; u=1; n=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tpcms.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-10-29T20:00:51+08:00 ] 127.0.0.1 GET www.tpcms.com/index/index/wxchat.html
+[运行时间：0.344507s] [吞吐率：2.90req/s] [内存消耗：2,946.86kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpstudy\PHPTutorial\WWW\tpcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'wxchat',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=64enedqa4at3dahrpvj95anh8n; u=1; n=admin',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tpcms.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/index/wxchat_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\index\controller\Index->wxChat[ E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\wx_chat.html [ array (
+  0 => 'html',
+  1 => 'list',
+  2 => 'page',
+  3 => 'get',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001459s ] mysql:host=127.0.0.1;dbname=tpcms;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_wx_chat` [ RunTime:0.014732s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_wx_chat` WHERE  `is_del` = 0 LIMIT 1 [ RunTime:0.001660s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_wx_chat` WHERE  `is_del` = 0 LIMIT 0,20 [ RunTime:0.001737s ]
