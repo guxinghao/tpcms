@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:85:"E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\wx_chat.html";i:1572330617;s:78:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\container.html";i:1571998722;s:78:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\left_menu.html";i:1572329440;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\head.html";i:1571994113;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\foot.html";i:1571996305;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:85:"E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\wx_chat.html";i:1572341778;s:78:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\container.html";i:1571998722;s:78:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\left_menu.html";i:1572348268;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\head.html";i:1572340285;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\foot.html";i:1572346264;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -38,15 +38,16 @@
       <!-- User Info-->
       <div class="sidenav-header-inner text-center">
         <img src="/static/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle">
-        <h2 class="h5">后台管理系统</h2><span>My Admin</span>
+        <h2 class="h5">后台管理系统</h2><span class="ses_user_name"></span>
       </div>
       <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>B</strong><strong>D</strong></a></div>
     </div>
     <!-- Sidebar Navigation Menus-->
     <div class="main-menu">
       <ul id="side-main-menu" class="side-menu list-unstyled">
-        <li><a href="<?php echo Url('index/wxChat'); ?>"> <i class="icon-home"></i>公众号信息</a></li>
-        <li><a href="forms.html"> <i class="icon-form"></i>职员信息</a></li>
+        <?php echo $html; ?>
+        <!-- <li><a href="<?php echo Url('index/wxChat'); ?>"> <i class="icon-home"></i>公众号信息</a></li> -->
+        <!-- <li><a href="<?php echo Url('user/index'); ?>"> <i class="icon-form"></i>职员信息</a></li> -->
       </ul>
     </div>
   </div>
@@ -149,7 +150,7 @@
             <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Log out-->
                 <li class="nav-item">
-                    <a href="login.html" class="nav-link logout">
+                    <a href="JavaScript:;" class="nav-link logout">
                         <span class="d-none d-sm-inline-block">退出</span>
                         <i class="fa fa-sign-out"></i>
                     </a>
@@ -461,12 +462,31 @@
 <script src="/static/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 <!-- Main File-->
 <script src="/static/js/front.js"></script>
+<script type="text/javascript">
+    let _name = $.cookie('n');
+    $('.ses_user_name').html(_name);
+    //退出登录
+    $('.logout').click(function(event) {
+        let _user_id = $.cookie('u');
+        $.ajax({
+            type: "post",
+            url: "<?php echo Url('Login/loginOut'); ?>",
+            data: {user_id:_user_id},
+            dataType: "json",
+            async: false,
+            success: function (e) {
+                $.removeCookie('n');
+                $.removeCookie('u');
+                setTimeout("window.location.href = '<?php echo Url('login/index'); ?>';",1000);
+            }
+        });
+    });
+</script>
 
         
 <script type="text/javascript" src="/static/ve/distpicker/distpicker.data.js"></script>
 <script type="text/javascript" src="/static/ve/distpicker/distpicker.js"></script>
 <script type="text/javascript" src="/static/ve/distpicker/main.js"></script>
-<script type="text/javascript" src="/static/js/grid.js"></script>
 <script type="text/javascript">
     $('#side-main-menu li').eq(0).addClass('active');
     $('#distpicker').distpicker('reset', true);

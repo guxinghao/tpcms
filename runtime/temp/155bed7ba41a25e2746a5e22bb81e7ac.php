@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:83:"E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\index.html";i:1572002688;s:78:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\container.html";i:1571998722;s:78:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\left_menu.html";i:1572337585;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\head.html";i:1572337638;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\foot.html";i:1572337852;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:83:"E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\index.html";i:1572002688;s:78:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\container.html";i:1571998722;s:78:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\left_menu.html";i:1572348268;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\head.html";i:1572340285;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\foot.html";i:1572346264;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -36,15 +36,16 @@
       <!-- User Info-->
       <div class="sidenav-header-inner text-center">
         <img src="/static/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle">
-        <h2 class="h5">后台管理系统</h2><span class="user_name"></span>
+        <h2 class="h5">后台管理系统</h2><span class="ses_user_name"></span>
       </div>
       <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>B</strong><strong>D</strong></a></div>
     </div>
     <!-- Sidebar Navigation Menus-->
     <div class="main-menu">
       <ul id="side-main-menu" class="side-menu list-unstyled">
-        <li><a href="<?php echo Url('index/wxChat'); ?>"> <i class="icon-home"></i>公众号信息</a></li>
-        <li><a href="forms.html"> <i class="icon-form"></i>职员信息</a></li>
+        <?php echo $html; ?>
+        <!-- <li><a href="<?php echo Url('index/wxChat'); ?>"> <i class="icon-home"></i>公众号信息</a></li> -->
+        <!-- <li><a href="<?php echo Url('user/index'); ?>"> <i class="icon-form"></i>职员信息</a></li> -->
       </ul>
     </div>
   </div>
@@ -96,12 +97,22 @@
 <script src="/static/js/front.js"></script>
 <script type="text/javascript">
     let _name = $.cookie('n');
-    $('.user_name').html(_name);
+    $('.ses_user_name').html(_name);
     //退出登录
     $('.logout').click(function(event) {
-        $.removeCookie('n');
-        $.removeCookie('u');
-        setTimeout("window.location.href = 'login.html';",3000);
+        let _user_id = $.cookie('u');
+        $.ajax({
+            type: "post",
+            url: "<?php echo Url('Login/loginOut'); ?>",
+            data: {user_id:_user_id},
+            dataType: "json",
+            async: false,
+            success: function (e) {
+                $.removeCookie('n');
+                $.removeCookie('u');
+                setTimeout("window.location.href = '<?php echo Url('login/index'); ?>';",1000);
+            }
+        });
     });
 </script>
 
