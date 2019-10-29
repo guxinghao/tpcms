@@ -2,22 +2,31 @@
 namespace app\index\controller;
 use think\Controller;
 use think\Request;
-use app\index\model\wxChat;
-class Index extends Controller
+use app\index\model\adminUser;
+class User extends Controller
 {
-    public function index()
-    {
-        return $this->fetch();
-    }
 
     //登录
-    public function login()
+    public function login($user_name,$pwd)
     {
-        return $this->fetch();
+        if (!trim($user_name)) {
+            return ['status'=>250,'msg'=>'用户名不能为空'];
+            exit();
+        }
+        if (!trim($pwd)) {
+            return ['status'=>250,'msg'=>'登录密码不能为空'];
+            exit();
+        }
+        $pwd = md5(trim($pwd));
+        $admin = adminUser::where(['user_name'=>trim($user_name),'password'=>$pwd])->field('id,user_name')->find();
+        if (empty($admin)) {
+            return ['status'=>250,'msg'=>'账号密码不正确'];
+        }
+        return $admin;
     }
 
     //微信公众号列表页
-    public function wxChat()
+    /*public function wxChat()
     {
         $request = Request::instance();
         $get = $request->get();
@@ -172,5 +181,5 @@ class Index extends Controller
         }else{
             return ['status'=>250,'msg'=>'删除失败,请重试'];
         }
-    }
+    }*/
 }

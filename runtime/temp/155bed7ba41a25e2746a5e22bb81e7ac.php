@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:83:"E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\index.html";i:1572002688;s:78:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\container.html";i:1571998722;s:78:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\left_menu.html";i:1572329440;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\head.html";i:1571994113;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\foot.html";i:1571996305;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:83:"E:\phpstudy\PHPTutorial\WWW\tpcms\public/../application/index\view\index\index.html";i:1572002688;s:78:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\container.html";i:1571998722;s:78:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\left_menu.html";i:1572337585;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\head.html";i:1572337638;s:73:"E:\phpstudy\PHPTutorial\WWW\tpcms\application\index\view\public\foot.html";i:1572337852;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -36,7 +36,7 @@
       <!-- User Info-->
       <div class="sidenav-header-inner text-center">
         <img src="/static/img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle">
-        <h2 class="h5">后台管理系统</h2><span>My Admin</span>
+        <h2 class="h5">后台管理系统</h2><span class="user_name"></span>
       </div>
       <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>B</strong><strong>D</strong></a></div>
     </div>
@@ -72,7 +72,7 @@
             <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Log out-->
                 <li class="nav-item">
-                    <a href="login.html" class="nav-link logout">
+                    <a href="JavaScript:;" class="nav-link logout">
                         <span class="d-none d-sm-inline-block">退出</span>
                         <i class="fa fa-sign-out"></i>
                     </a>
@@ -94,6 +94,16 @@
 <script src="/static/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 <!-- Main File-->
 <script src="/static/js/front.js"></script>
+<script type="text/javascript">
+    let _name = $.cookie('n');
+    $('.user_name').html(_name);
+    //退出登录
+    $('.logout').click(function(event) {
+        $.removeCookie('n');
+        $.removeCookie('u');
+        setTimeout("window.location.href = 'login.html';",3000);
+    });
+</script>
 
         
     </body>
