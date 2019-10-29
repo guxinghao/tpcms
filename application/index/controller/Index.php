@@ -15,7 +15,11 @@ class Index extends Controller
     {
         $request = Request::instance();
         $get = $request->get();
-        unset($get['/index/index/wxchat_html']);
+        //去除不使用的键名
+        if ($get) {
+            unset($get['/index/index/wxchat_html']);
+            unset($get['page']);
+        }
         if (empty($get)) {
             $get = [
                 'name'=>'',
@@ -35,7 +39,6 @@ class Index extends Controller
         }
         //如果不为空 则拼接查询语句
         $che = self::checkEmpet($get);
-
         $where['is_del'] = 0;
         if ($che['is_empty']) {
             $where = array_merge($where,$che['where']);
@@ -54,7 +57,7 @@ class Index extends Controller
         return $this->fetch();
     }
     //新增微信公众号列表页
-    public function addDate()
+    public function addOrEditDate()
     {
         $request = Request::instance();
         $data = $request->post();
@@ -94,12 +97,24 @@ class Index extends Controller
             'classify'=>$data['classify'],//0 未选择  1订阅号 2服务号
             'create_time'=>time(),
         ];
-        $wxChat = wxChat::create($insert_data);
-        if ($wxChat->id) {
-            return ['status'=>200,'msg'=>'success'];
+        //获取数据的id 如果存在则为修改 如果不存在 则为新增
+        $id = $data['data_id']?:0;
+        if ($id) {//修改
+            unset($insert_data['create_time']);
+            $wxChat = wxChat::where('id', $id)->update($insert_data);
+            $msg = '修改失败,请重试';
+            $flag = $wxChat?true:false;
         }else{
-            return ['status'=>250,'msg'=>'新增失败,请重试'];
+            $wxChat = wxChat::create($insert_data);
+            $msg = '新增失败,请重试';
+            $flag = $wxChat->id?true:false;
         }
+        if ($flag) {
+            $return = ['status'=>200,'msg'=>'success'];
+        }else{
+            $return = ['status'=>250,'msg'=>$msg];
+        }
+        return $return;
     }
 
     //判断传递的数组是否为空 如果不为空 则返回已不为空的数组 [key=>value]
@@ -142,5 +157,16 @@ class Index extends Controller
             ];
         }
         return ['is_empty'=>$is_empty,'where'=>$arr];
+    }
+
+    // 删除某条数据
+    public function delDate($id)
+    {
+        $re = wxChat::update(['id' => $id, 'is_del' => 1]);
+        if ($re['is_del']==1) {
+            return ['status'=>200,'msg'=>'success'];
+        }else{
+            return ['status'=>250,'msg'=>'删除失败,请重试'];
+        }
     }
 }

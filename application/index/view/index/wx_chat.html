@@ -14,6 +14,7 @@
             border-radius: 8%;
             float: right;
             cursor: pointer;
+            margin-bottom: 6px;
         }
         .addButton a{
             color: #fff!important;
@@ -64,6 +65,18 @@
         .mysearch{
             margin-bottom: 5px!important;
         }
+        .form-inline .form-control{
+            height:28px;
+            border-radius:3%;
+        }
+        #inlineFormInputGroup11{
+            font-size: 13px;
+            padding-left: 8px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            width: 208px;
+        }
     </style>
     <div class="page">
         <!-- navbar-->
@@ -86,48 +99,48 @@
                                 <input id="inlineFormInput1" value="{$get['name']}" type="text" name="name" placeholder="公众号名称" class="mr-3 form-control">
                             </div>
                             <div class="form-group mysearch">
-                                <input id="inlineFormInputGroup2" value="{$get['idendity']}" type="text" name="idendity" placeholder="公众号ID" class="mr-3 form-control form-control">
+                                <input id="inlineFormInputGroup2" value="{$get['idendity']}" type="text" name="idendity" placeholder="公众号ID" class="mr-3 form-control">
                             </div>
                             <div class="form-group mysearch">
-                                <input id="inlineFormInputGroup3" value="{$get['main_body']}" type="text" name="main_body" placeholder="公众号主体" class="mr-3 form-control form-control">
+                                <input id="inlineFormInputGroup3" value="{$get['main_body']}" type="text" name="main_body" placeholder="公众号主体" class="mr-3 form-control">
                             </div>
                             <div class="form-group mysearch">
-                                <input id="inlineFormInputGroup4" value="{$get['type']}" type="text" name="type" placeholder="公众号类别" class="mr-3 form-control form-control">
+                                <input id="inlineFormInputGroup4" value="{$get['type']}" type="text" name="type" placeholder="公众号类别" class="mr-3 form-control">
                             </div>
                             <div class="form-group mysearch">
-                                <input id="inlineFormInputGroup6" value="{$get['province']}" type="text" name="province" placeholder="所属省" class="mr-3 form-control form-control">
+                                <input id="inlineFormInputGroup6" value="{$get['province']}" type="text" name="province" placeholder="所属省" class="mr-3 form-control">
                             </div>
                             <div class="form-group mysearch">
-                                <input id="inlineFormInputGroup7" value="{$get['city']}" type="text" name="city" placeholder="所属市" class="mr-3 form-control form-control">
+                                <input id="inlineFormInputGroup7" value="{$get['city']}" type="text" name="city" placeholder="所属市" class="mr-3 form-control">
                             </div>
                             <div class="form-group mysearch">
-                                <input id="inlineFormInputGroup8" value="{$get['district']}" type="text" name="district" placeholder="所属区" class="mr-3 form-control form-control">
+                                <input id="inlineFormInputGroup8" value="{$get['district']}" type="text" name="district" placeholder="所属区" class="mr-3 form-control">
                             </div>
                             <div class="form-group mysearch">
-                                <input id="inlineFormInputGroup9" value="{$get['channel']}" type="text" name="channel" placeholder="运营渠道" class="mr-3 form-control form-control">
+                                <input id="inlineFormInputGroup9" value="{$get['channel']}" type="text" name="channel" placeholder="运营渠道" class="mr-3 form-control">
                             </div>
                             <div class="form-group mysearch">
-                                <input id="inlineFormInputGroup13" type="text"  value="{$get['fans_number_st']}" name="fans_number_st" style="margin-right:0!important " placeholder="粉丝区间1" class="mr-3 form-control form-control"> 至
-                                <input id="inlineFormInputGroup14" type="text"  name="fans_number_ed" placeholder="粉丝区间2" class="mr-3 form-control form-control">
+                                <input id="inlineFormInputGroup13" type="text"  value="{$get['fans_number_st']}" name="fans_number_st" style="margin-right:0!important " placeholder="粉丝区间1" class="mr-3 form-control"> 至
+                                <input id="inlineFormInputGroup14" type="text"  name="fans_number_ed" placeholder="粉丝区间2" class="mr-3 form-control">
                             </div>
                             <div class="form-group mysearch">
-                                <input id="inlineFormInputGroup15" type="text"  value="{$get['first_money_st']}" name="first_money_st" style="margin-right:0!important " placeholder="首条成本数量1" class="mr-3 form-control form-control"> 至
-                                <input id="inlineFormInputGroup16" type="text" value="{$get['first_money_ed']}"  name="first_money_ed" placeholder="首条成本区间2" class="mr-3 form-control form-control">
+                                <input id="inlineFormInputGroup15" type="text"  value="{$get['first_money_st']}" name="first_money_st" style="margin-right:0!important " placeholder="首条成本数量1" class="mr-3 form-control"> 至
+                                <input id="inlineFormInputGroup16" type="text" value="{$get['first_money_ed']}"  name="first_money_ed" placeholder="首条成本区间2" class="mr-3 form-control">
                             </div>
                             <div class="form-group mysearch">
-                                <input id="inlineFormInputGroup10" type="text" value="{$get['quality']}" name="quality" placeholder="公众号属性" class="mr-3 form-control form-control">
+                                <input id="inlineFormInputGroup10" type="text" value="{$get['quality']}" name="quality" placeholder="公众号属性" class="mr-3 form-control">
                             </div>
                             <div class="form-group mysearch">
-                                <!-- <input id="inlineFormInputGroup11" type="text" name="classify" placeholder="公众号分类" class="mr-3 form-control form-control"> -->
-                                <select id="inlineFormInputGroup11" type="text" value="{$get['classify']}" name="classify" class="mr-3 form-control form-control">
+                                <!-- <input id="inlineFormInputGroup11" type="text" name="classify" placeholder="公众号分类" class="mr-3 form-control"> -->
+                                <select id="inlineFormInputGroup11" type="text" value="{$get['classify']}" name="classify" class="mr-3 form-control">
                                     <!--  1订阅号 2 服务号 -->
                                     <option {$get['classify']?'':'selected=selected'} value="0">请选择公众号分类</option>
                                     <option {$get['classify']==1?'selected=selected':''} value="1">订阅号</option>
                                     <option {$get['classify']==2?'selected=selected':''} value="2">服务号</option>
                                 </select>
                             </div>
-                            <div class="form-group mysearch">
-                                <input type="submit" value="Submit" class="mr-3 btn btn-primary">
+                            <div class="form-group mysearch" style="height: 30px;">
+                                <input type="submit" style="height: 27px;line-height: 13px;width: 65px;" value="搜索" class="mr-3 btn btn-primary">
                             </div>
                         </form>
                     </div>
@@ -137,14 +150,14 @@
                         <div>
                             <!-- Button trigger modal -->
                             <p class="addButton">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">添加</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="height: 30px;line-height: 14px;">添加</button>
                             </p>
                         </div>
                         <div style="width: 100%;overflow-x: auto;">
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr class="head_tr">
-                                        <th>#</th>
+                                        <th>编号</th>
                                         <th>公众号名称</th>
                                         <th>公众号ID</th>
                                         <th>公众号主体</th>
@@ -165,24 +178,24 @@
                                 </thead>
                                 <tbody>
                                     {volist name='list' id='item'}
-                                    <tr>
+                                    <tr id="list{$item.id}">
                                         <th scope="row">{$item.id}</th>
-                                        <td>{$item.name}</td>
-                                        <td>{$item.idendity}</td>
-                                        <td>{$item.main_body}</td>
-                                        <td>{$item.province}</td>
-                                        <td>{$item.city}</td>
-                                        <td>{$item.district}</td>
-                                        <td>{$item.type}</td>
-                                        <td>{$item.fans_number}</td>
-                                        <td>{$item.first_money}</td>
-                                        <td>{$item.second_money}</td>
-                                        <td>{$item.more_money}</td>
-                                        <td>{$item.order_number}</td>
-                                        <td>{$item.channel}</td>
-                                        <td>{$item.quality}</td>
-                                        <td>{$item.classify==1?'订阅号':'服务号'}</td>
-                                        <td>操作</td>
+                                        <td id="name{$item.id}">{$item.name}</td>
+                                        <td id="idendity{$item.id}">{$item.idendity}</td>
+                                        <td id="main_body{$item.id}">{$item.main_body}</td>
+                                        <td id="province{$item.id}">{$item.province}</td>
+                                        <td id="city{$item.id}">{$item.city}</td>
+                                        <td id="district{$item.id}">{$item.district}</td>
+                                        <td id="type{$item.id}">{$item.type}</td>
+                                        <td id="fans_number{$item.id}">{$item.fans_number}</td>
+                                        <td id="first_money{$item.id}">{$item.first_money}</td>
+                                        <td id="second_money{$item.id}">{$item.second_money}</td>
+                                        <td id="more_money{$item.id}">{$item.more_money}</td>
+                                        <td id="order_number{$item.id}">{$item.order_number}</td>
+                                        <td id="channel{$item.id}">{$item.channel}</td>
+                                        <td id="quality{$item.id}">{$item.quality}</td>
+                                        <td id="classify{$item.id}" data-classify={$item.classify}>{$item.classify==1?'订阅号':'服务号'}</td>
+                                        <td><i class="fa fa-edit" data-id={$item.id}></i><i class="fa fa-university" onclick="showDeleteModal(this,{$item.id})"></i></td>
                                     </tr>
                                     {/volist}
                                 </tbody>
@@ -196,7 +209,7 @@
       </section>
     </div>
 
-<!-- Modal -->
+<!-- 模态框 新增数据-->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document" style="width: 700px;">
     <div class="modal-content">
@@ -324,14 +337,41 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-        <button type="button" class="btn btn-primary subBtn">保存</button>
+        <button type="button" class="btn btn-primary subBtn" id="submit_btn" data-id=0>保存</button>
       </div>
     </div>
   </div>
 </div>
+<!-- 弹出框 -->
 <div class="myAlert" style="display: none;">
     <p><i class="alert_class"></i><span class="showMsg">提交成功</span></p>
 </div>
+<!-- 模态框   信息删除确认 -->
+<div class="modal fade" id="delcfmOverhaul">
+    <div class="modal-dialog">
+        <div class="modal-content message_align">
+            <div class="modal-header" style="display: inline-block;">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">
+                <!-- 隐藏需要删除的id -->
+                <input type="hidden" id="deleteHaulId" />
+                <p>您确认要删除该条信息吗？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary"
+                    id="deleteHaulBtn">确认</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
 {/block}
 {block name="newJs"}
 <script type="text/javascript" src="__STATIC__/ve/distpicker/distpicker.data.js"></script>
@@ -340,12 +380,17 @@
 <script type="text/javascript" src="__STATIC__/js/grid.js"></script>
 <script type="text/javascript">
     $('#side-main-menu li').eq(0).addClass('active');
+    $('#distpicker').distpicker('reset', true);
     $("#distpicker").distpicker({
         autoSelect: false
     });
     //提交数据
     $('.subBtn').click(function(event) {
+        //获取data-id  如果存在则为修改  否则为新增
+        let _data_id = $(this).attr('data-id')?$(this).attr('data-id'):0;
+
         let _data = {
+            data_id:_data_id,//用于修改或者新增的判断标识
             name:$('.name').val(),
             idendity:$('.idendity').val(),
             main_body:$('.main_body').val(),
@@ -364,7 +409,7 @@
         };
         $.ajax({
             type: "post",
-            url: "{:Url('index/addDate')}",
+            url: "{:Url('index/addOrEditDate')}",
             data: _data,
             dataType: "json",
             async: false,
@@ -381,18 +426,118 @@
                     $('.alert_class').addClass('success_alert');
                     $('.myAlert').css('display','block');
                     setTimeout("hide_motai()",2000);
+                    setTimeout("location.reload()",2000);
                 }
             }
         });
     });
 
+    //模态框隐藏
     function hide_motai(){
-        $('#exampleModal').modal('hide');//模态框隐藏
+        $('#exampleModal').modal('hide');
         hide_alert();
     }
+    //隐藏alert
     function hide_alert(){
         $('.myAlert').css('display','none');
     }
 
+    // 打开询问是否删除的模态框并设置需要删除的大修的ID
+    function showDeleteModal(obj,_id) {
+        $("#deleteHaulId").val(_id);// 将模态框中需要删除的大修的ID设为需要删除的ID
+        $("#delcfmOverhaul").modal({
+            backdrop : 'static',
+            keyboard : false
+        });
+    }
+    // 删除数据 模态框的确定按钮的点击事件
+    $("#deleteHaulBtn").click(function() {
+        $('#delcfmOverhaul').modal('hide');
+        let _id = $("#deleteHaulId").val();
+        // ajax异步删除
+        $.ajax({
+            type: "post",
+            url: "{:Url('index/delDate')}",
+            data: {id:_id},
+            dataType: "json",
+            async: false,
+            success: function (e) {
+                if (e.status==250) {
+                    $('.myAlert').addClass('myAlert_error');
+                    $('.alert_class').addClass('error_alert');
+                    $('.myAlert').css('display','block');
+                    $('.showMsg').html(e.msg);
+                    setTimeout("hide_alert()",2000);
+
+                }else{
+                    $('.myAlert').addClass('myAlert_success');
+                    $('.alert_class').addClass('success_alert');
+                    $('.showMsg').html('删除成功');
+                    $('.myAlert').css('display','block');
+                    setTimeout("location.reload()",2000);
+                }
+            }
+        });
+    });
+
+    //新增模态框消失的时候 触发  重置地区插件 清空数据
+    $('#exampleModal').on('hide.bs.modal', function () {
+        $('#exampleModalLabel').html('添加微信公众号信息');
+        $('.name').val('');
+        $('.idendity').val('');
+        $('.main_body').val('');
+        $('.main_body').val('');
+        $('.type').val('');
+        $('.fans_number').val('');
+        $('.first_money').val('');
+        $('.second_money').val('');
+        $('.more_money').val('');
+        $('.order_number').val('');
+        $('.channel').val('');
+        $('.quality').val('');
+        $('.quality').val('');
+        $(".classify").val(0);
+        $('#distpicker').distpicker('reset', true);
+        $('#submit_btn').attr('data-id',0);
+    })
+
+    //编辑数据的时候 使用 初始化原始数据
+    $('.fa-edit').on('click', function (e) {
+        let _id = $(this).attr('data-id')?$(this).attr('data-id'):0;
+        if (!_id) {
+            $('.myAlert').addClass('myAlert_error');
+            $('.alert_class').addClass('error_alert');
+            $('.myAlert').css('display','block');
+            $('.showMsg').html('数据异常');
+            setTimeout("hide_alert()",2000);
+        }
+        //将原始数据拼接到页面中
+        $('#exampleModalLabel').html('修改微信公众号信息');
+        $('.name').val($('#name'+_id).html());
+        $('.idendity').val($('#idendity'+_id).html());
+        $('.main_body').val($('#main_body'+_id).html());
+        $('.main_body').val($('#main_body'+_id).html());
+
+        //初始化三级联动
+        let province = $('#province'+_id).html();
+        let city = $('#city'+_id).html();
+        let district = $('#district'+_id).html();
+        $('#distpicker').distpicker('destroy');
+        $('#distpicker').distpicker({province:province,city:city,district:district});
+
+        $('.type').val($('#type'+_id).html());
+        $('.fans_number').val($('#fans_number'+_id).html());
+        $('.first_money').val($('#first_money'+_id).html());
+        $('.second_money').val($('#second_money'+_id).html());
+        $('.more_money').val($('#more_money'+_id).html());
+        $('.order_number').val($('#order_number'+_id).html());
+        $('.channel').val($('#channel'+_id).html());
+        $('.quality').val($('#quality'+_id).html());
+        $('.quality').val($('#quality'+_id).html());
+        let _classify = $('#classify'+_id).attr('data-classify');
+        $(".classify").val(_classify);
+        $('#submit_btn').attr('data-id',_id);
+        $('#exampleModal').modal('show');
+    })
 </script>
 {/block}
