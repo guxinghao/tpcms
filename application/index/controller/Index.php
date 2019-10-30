@@ -15,6 +15,11 @@ class Index extends Base
     {
         $request = Request::instance();
         $get = $request->get();
+        $pageSize = 20;//显示条数
+
+        //index 用于编号
+        $i = $get['page']??1;
+        $index = (($i-1)*$pageSize);
         //去除不使用的键名
         if ($get) {
             unset($get['/index/index/wxchat_html']);
@@ -44,12 +49,13 @@ class Index extends Base
         if ($che['is_empty']) {
             $where = array_merge($where,$che['where']);
         }
-        $list = wxChat::where($where)->paginate(20);
+        $list = wxChat::where($where)->paginate($pageSize);
         // $list = wxChat::where($where)->fetchSql(true)->select();
         // var_dump($list);die;
         // 获取分页显示
         $page = $list->render();
         // 模板变量赋值
+        $this->assign('index', $index);
         $this->assign('list', $list);
         $this->assign('page', $page);
         $this->assign('get', $get);

@@ -124,9 +124,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {volist name='list' id='item' mod=1}
+                                    {volist name='list' id='item'}
                                     <tr>
-                                        <th scope="row">{$item.id}</th>
+                                        <th scope="row">{$index+$i}</th>
                                         <td id="user_name{$item.id}">{$item.user_name}</td>
                                         <td id="real_name{$item.id}">{$item.real_name}</td>
                                         <td id="mobile{$item.id}">{$item.mobile}</td>
