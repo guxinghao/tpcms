@@ -48,14 +48,15 @@ class Login extends Controller
         //判断是否已经登录
         $uid = Session::get('user_id');
         if (!$uid) {
-            $this->redirect('Login/index');
+            return 0;
         }
         $now_token = session_id();
         $admin = adminUser::get($uid);
         $old_token = $admin->token;
         if ($now_token != $old_token) {
-            $this->redirect('Login/index');
+            return 0;
         }
+
         return 1;
     }
 }
