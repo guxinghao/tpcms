@@ -9,6 +9,11 @@ class User extends Base
     {
         $request = Request::instance();
         $get = $request->get();
+        $pageSize = 20;//显示条数
+
+        //index 用于编号
+        $i = $get['page']??1;
+        $index = (($i-1)*$pageSize);
         $where['is_del'] = 0;
         $search = '';
 
@@ -16,10 +21,11 @@ class User extends Base
             $search = trim($get['search'])?:'';
             $where['user_name|real_name|mobile'] = ['like','%'.$search.'%'];
         }
-        $list = adminUser::where($where)->paginate(20);
+        $list = adminUser::where($where)->paginate($pageSize);
         // 获取分页显示
         $page = $list->render();
         // 模板变量赋值
+        $this->assign('index', $index);
         $this->assign('list', $list);
         $this->assign('page', $page);
         $this->assign('search', $search);
