@@ -31,6 +31,7 @@ class Index extends Base
                 'district'=>'',
                 'channel'=>'',
                 'fans_number_st'=>'',
+                'fans_number_ed'=>'',
                 'first_money_st'=>'',
                 'first_money_ed'=>'',
                 'quality'=>'',
