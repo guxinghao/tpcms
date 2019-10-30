@@ -29,6 +29,10 @@ class Login extends Controller
         }
         Session::set('user_id',$admin['id']);
         Session::set('role_id',$admin['role_id']);
+        $session_id = session_id();
+        $user_data['token'] = $session_id;
+        $user_data['is_login'] = 1;
+        adminUser::where('id', $admin['id'])->update($user_data);
         return $admin;
     }
 
