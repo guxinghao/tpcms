@@ -44,6 +44,8 @@ class Index extends Base
             $where = array_merge($where,$che['where']);
         }
         $list = wxChat::where($where)->paginate(20);
+        // $list = wxChat::where($where)->fetchSql(true)->select();
+        // var_dump($list);die;
         // 获取分页显示
         $page = $list->render();
         // 模板变量赋值
@@ -144,15 +146,34 @@ class Index extends Base
             }
         }
         if (!empty($fans_number)) {
-            $arr['fans_number'] = [
-                $fans_number['fans_number1']?:0,$fans_number['fans_number2']
-            ];
+            if (isset($fans_number['fans_number1']) && isset($fans_number['fans_number2'])) {
+                $arr['fans_number'] = [
+                    $fans_number['fans_number1']?:0,$fans_number['fans_number2']?:0
+                ];
+            }else if (isset($fans_number['fans_number1']) && (!isset($fans_number['fans_number2']))) {
+                $arr['fans_number'] = $fans_number['fans_number1'];
+            }else if ((!isset($fans_number['fans_number1'])) && isset($fans_number['fans_number2'])) {
+                $arr['fans_number'] = $fans_number['fans_number2'];
+            }
+
         }
         if (!empty($first_money)) {
-            $arr['first_money'] = [
-                $first_money['first_money1']?:0,$first_money['first_money2']
-            ];
+            if (isset($first_money['first_money1']) && isset($first_money['first_money2'])) {
+                $arr['first_money'] = [
+                    $first_money['first_money1']?:0,$first_money['first_money2']
+                ];
+            }else if (isset($first_money['first_money1']) && (!isset($first_money['first_money2']))) {
+                $arr['first_money'] = $first_money['first_money1'];
+            }else if ((!isset($first_money['fans_number1'])) && isset($first_money['first_money2'])) {
+                $arr['first_money'] = $first_money['first_money2'];
+            }
+
         }
+        // if (!empty($first_money)) {
+        //     $arr['first_money'] = [
+        //         $first_money['first_money1']?:0,$first_money['first_money2']
+        //     ];
+        // }
         return ['is_empty'=>$is_empty,'where'=>$arr];
     }
 
