@@ -3,10 +3,20 @@ namespace app\index\controller;
 use think\Controller;
 use think\Session;
 use think\Url;
+use app\index\model\adminUser;
 class Base extends Controller{
     public function _initialize(){
         $uid = Session::get('user_id');
+
+        //判断是否登录  未登录 跳转登录
         if($uid == null){
+            $this->redirect('Login/index');
+        }
+        //判断是否已经登录
+        $now_token = session_id();
+        $admin = adminUser::get($uid);
+        $old_token = $admin->token;
+        if ($now_token != $old_token) {
             $this->redirect('Login/index');
         }
 
