@@ -39,19 +39,24 @@ class Login extends Controller
     //退出登录
     public function loginOut($user_id)
     {
-        //判断是否已经登录
-        $uid = Session::get('user_id');
-        $now_token = session_id();
-        $admin = adminUser::get($uid);
-        $old_token = $admin->token;
-        if ($now_token != $old_token) {
-            $this->redirect('Login/index');
-        }
-
-        $user_data['is_login'] = 0;
-        adminUser::where('id', $uid)->update($user_data);
         Session::delete('user_id');
         return ['status'=>200,'msg'=>'退出成功'];
     }
 
+    public function checkLogin()
+    {
+        //判断是否已经登录
+        $uid = Session::get('user_id');
+        if (!$uid) {
+            return 0;
+        }
+        $now_token = session_id();
+        $admin = adminUser::get($uid);
+        $old_token = $admin->token;
+        if ($now_token != $old_token) {
+            return 0;
+        }
+
+        return 1;
+    }
 }
