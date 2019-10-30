@@ -36,9 +36,12 @@ class Login extends Controller
         return $admin;
     }
 
-    //登录
+    //退出登录
     public function loginOut($user_id)
     {
+        $uid = Session::get('user_id');
+        $user_data['is_login'] = 0;
+        adminUser::where('id', $uid)->update($user_data);
         Session::delete('user_id');
         return ['status'=>200,'msg'=>'退出成功'];
     }
