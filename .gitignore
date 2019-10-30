@@ -1,5 +1,4 @@
-.idea
-.project
-.runtime/
-.git
+runtime/
+application/database.php
+.git/
 

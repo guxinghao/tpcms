@@ -124,13 +124,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {volist name='list' id='item'}
+                                    {volist name='list' id='item' mod=1}
                                     <tr>
                                         <th scope="row">{$item.id}</th>
                                         <td id="user_name{$item.id}">{$item.user_name}</td>
                                         <td id="real_name{$item.id}">{$item.real_name}</td>
                                         <td id="mobile{$item.id}">{$item.mobile}</td>
-                                        <td><i class="fa fa-edit" data-id={$item.id}></i> <i class="fa fa-university" onclick="showDeleteModal(this,{$item.id})"></i></td>
+                                        <td><i class="fa fa-edit" data-id={$item.id}></i>
+                                            {neq name="$item.id" value="1"} <i class="fa fa-university" onclick="showDeleteModal(this,{$item.id})"></i>
+                                            {/neq}
+                                        </td>
                                     </tr>
                                     {/volist}
                                 </tbody>
