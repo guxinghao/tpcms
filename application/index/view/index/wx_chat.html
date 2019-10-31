@@ -77,6 +77,12 @@
             padding-top: 0px;
             width: 208px;
         }
+        .table td, .table th {
+            padding: 0.25rem!important;
+        }
+        table {
+            font-size: 0.8em!important;
+        }
     </style>
     <div class="page">
         <!-- navbar-->
@@ -195,7 +201,7 @@
                                         <td id="channel{$item.id}">{$item.channel}</td>
                                         <td id="quality{$item.id}">{$item.quality}</td>
                                         <td id="classify{$item.id}" data-classify={$item.classify}>{$item.classify==1?'订阅号':'服务号'}</td>
-                                        <td><i class="fa fa-edit" data-id={$item.id}></i><i class="fa fa-university" onclick="showDeleteModal(this,{$item.id})"></i></td>
+                                        <td><i class="fa fa-edit" data-id={$item.id}></i> <i class="fa fa-university" onclick="showDeleteModal(this,{$item.id})"></i></td>
                                     </tr>
                                     {/volist}
                                 </tbody>
