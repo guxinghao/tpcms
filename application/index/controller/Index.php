@@ -70,6 +70,20 @@ class Index extends Base
         if (!$data['name']) {
             return ['status'=>250,'msg'=>'请填写公众号名称'];
         }
+        //获取数据的id 如果存在则为修改 如果不存在 则为新增
+        $id = $data['data_id']?:0;
+
+        //判断名称是否重复  重复则退出  提醒
+        if ($id) {
+            $va['id'] = ['<>',$id];
+        }
+        $va['name'] = $data['name'];
+        $va['is_del'] = 0;
+        $isOnly = wxChat::where($va)->find();
+        if (!empty($isOnly) && isset($isOnly)) {
+            return ['status'=>250,'msg'=>'该公众号名称已存在,请重新填写'];
+        }
+
         if ($data['fans_number'] && (!is_numeric($data['fans_number']))) {
             return ['status'=>250,'msg'=>'粉丝数量需要为纯数字'];
         }
@@ -103,8 +117,6 @@ class Index extends Base
             'classify'=>$data['classify'],//0 未选择  1订阅号 2服务号
             'create_time'=>time(),
         ];
-        //获取数据的id 如果存在则为修改 如果不存在 则为新增
-        $id = $data['data_id']?:0;
         if ($id) {//修改
             unset($insert_data['create_time']);
             $wxChat = wxChat::where('id', $id)->update($insert_data);
