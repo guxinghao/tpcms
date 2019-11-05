@@ -21,7 +21,7 @@ class User extends Base
             $search = trim($get['search'])?:'';
             $where['user_name|real_name|mobile'] = ['like','%'.$search.'%'];
         }
-        $list = adminUser::where($where)->paginate($pageSize);
+        $list = adminUser::where($where)->paginate($pageSize,false,['query'=>request()->param()]);
         // 获取分页显示
         $page = $list->render();
         // 模板变量赋值
