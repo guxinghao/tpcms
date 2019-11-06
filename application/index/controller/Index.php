@@ -49,7 +49,7 @@ class Index extends Base
         if ($che['is_empty']) {
             $where = array_merge($where,$che['where']);
         }
-        $list = wxChat::where($where)->paginate($pageSize,false,['query'=>request()->param()]);
+        $list = wxChat::where($where)->order('id', 'desc')->paginate($pageSize,false,['query'=>request()->param()]);
         // $list = wxChat::where($where)->fetchSql(true)->select();
         // var_dump($list);die;
         // 获取分页显示
