@@ -17,7 +17,7 @@ class Bootstrap3 extends Paginator
 {
 
     public $rollPage=5;//分页栏每页显示的页数
-    
+
     public $showPage=12;//总页数超过多少条时显示的首页末页
     /**
      * 上一页按钮
@@ -53,7 +53,7 @@ class Bootstrap3 extends Paginator
 
         return $this->getPageLinkWrapper($url, $text);
     }
-    
+
     /**
      * 首页按钮
      * @param string $text
@@ -66,11 +66,11 @@ class Bootstrap3 extends Paginator
                 return $this->getDisabledTextWrapper($text);
             }
             $url = $this->url(1);
-    
+
             return $this->getPageLinkWrapper($url, $text);
         }
     }
-    
+
     /**
      * 末页按钮
      * @param string $text
@@ -83,11 +83,11 @@ class Bootstrap3 extends Paginator
                 return $this->getDisabledTextWrapper($text);
             }
             $url = $this->url($this->lastPage);
-        
+
             return $this->getPageLinkWrapper($url, $text);
         }
     }
-    
+
     /**
      * 页码按钮
      * @return string
@@ -105,7 +105,7 @@ class Bootstrap3 extends Paginator
 
         $rollPage = $this->rollPage;//分页栏每页显示的页数
         $nowPage = floor($rollPage/2);//计算分页临时变量
-        
+
         if($this->lastPage <= $rollPage){
             $block['first'] = $this->getUrlRange(1, $this->lastPage);
         }else if($this->currentPage <= $nowPage){
