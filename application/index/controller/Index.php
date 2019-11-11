@@ -15,7 +15,7 @@ class Index extends Base
     {
         $request = Request::instance();
         $get = $request->get();
-        $pageSize = 10;//显示条数
+        $pageSize = 2;//显示条数
         //index 用于编号
         $i = $get['page']??1;
         $index = (($i-1)*$pageSize);
